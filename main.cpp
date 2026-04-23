@@ -67,10 +67,30 @@ void Ndetiksetelah (jam &j){
         cout << endl;   
     }
 }
+void konversiDetikKeJam (jam &j){
+    int totalDetik;
+    cout << "masukan berapa detik yang akan di konversi : ";
+    cin >> totalDetik;
+
+    j.hour = totalDetik / 3600;
+    totalDetik = totalDetik % 3600;
+
+    j.minute = totalDetik / 60;
+    j.second = totalDetik % 60;
+
+    cout << "hasil konversi: ";
+    cetak2digit(j.hour);
+    cout << ":";
+    cetak2digit(j.minute);
+    cout << ":";
+    cetak2digit(j.second);
+    cout << endl;
+}
 int main (){
     jam j1;
     inputJam (j1);
     printHasil (j1);
     Ndetiksetelah (j1);
+    konversiDetikKeJam (j1);
     return 0;
 }
