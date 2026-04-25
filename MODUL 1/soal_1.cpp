@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main (){
-    // initialisasi variabel
+    // Deklarasi variabel
     int hargaBeras, hargaTelur, hargaMinyakGoreng, totalBelanja, totalPajak, totalAkhirBelanja, uangPelanggan, kembalian, sisa;
     int seratus = 100000, limaPuluh = 50000, duapuluh = 20000, sepuluh = 10000, limaribu = 5000, seribuKertas = 1000, seribuKoin = 1000, limaratusKoin = 500, duaratusKoin = 200, seratusKoin = 100;
     int n100k, n50k, n20k, n10k, n5k, n1k, k1k, k500, k200, k100;
@@ -19,7 +19,7 @@ int main (){
     cin >> hargaMinyakGoreng;
     cout << "---------------------------------------" << endl;
 
-    // Hitunng total belanja, total pajak, dan total akhir belanja. 
+    // Hitung total belanja, total pajak, dan total akhir belanja. 
     totalBelanja = hargaBeras + hargaTelur + hargaMinyakGoreng;
     totalPajak = totalBelanja * 25/100;
     totalAkhirBelanja = totalBelanja + totalPajak;
@@ -45,12 +45,12 @@ int main (){
     n5k = sisa / limaribu; sisa %= limaribu;
     n1k = sisa / seribuKertas; sisa %= seribuKertas;
 
-    k1k = sisa / seribuKoin; sisa %= seratusKoin;
+    k1k = sisa / seribuKoin; sisa %= seribuKoin;
     k500 = sisa / limaratusKoin; sisa %= limaratusKoin;
     k200 = sisa / duaratusKoin; sisa %= duaratusKoin;
     k100 = sisa / seratusKoin; sisa %= seratusKoin;
-    cout << "---------------------------------------" << endl;
 
+    cout << "---------------------------------------" << endl;
     cout << "- Rp 100.000  : " << n100k << " lembar" << endl;
     cout << "- Rp 50.000   : " << n50k << " lembar" << endl;
     cout << "- Rp 20.000   : " << n20k << " lembar " << endl;
