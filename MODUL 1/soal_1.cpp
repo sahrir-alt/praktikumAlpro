@@ -3,7 +3,6 @@ using namespace std;
 int main (){
     // Deklarasi variabel.
     int hargaBeras, hargaTelur, hargaMinyakGoreng, totalBelanja, totalPajak, totalAkhirBelanja, uangPelanggan, kembalian;
-    int seratus = 100000, limaPuluh = 50000, duapuluh = 20000, sepuluh = 10000, limaribu = 5000, seribuKertas = 1000, seribuKoin = 1000, limaratusKoin = 500, duaratusKoin = 200, seratusKoin = 100;
     int n100k, n50k, n20k, n10k, n5k, n1k, k1k, k500, k200, k100;
 
     cout << "============================================\n";
@@ -12,11 +11,11 @@ int main (){
     cout << "[Bina]: Than, masukan harga barangnya Rendy di program ini!\n";
 
     // Input Harga Beras, Telur, dan Minyak goreng dari pelanggan.
-    cout << "masukan harga Beras (Rp.)         : ";
+    cout << "Harga Beras (Rp.)         : ";
     cin >> hargaBeras;
-    cout << "masukan harga Telur (Rp.)         : ";
+    cout << "Harga Telur (Rp.)         : ";
     cin >> hargaTelur;
-    cout << "masukan harga Minyak Goreng (Rp.) : ";
+    cout << "Harga Minyak Goreng (Rp.) : ";
     cin >> hargaMinyakGoreng;
     cout << "--------------------------------------------\n";
 
@@ -25,11 +24,12 @@ int main (){
     totalAkhirBelanja = totalBelanja + totalPajak;
     
     // Menampilkan Total akhir Belanja + Pajak.
-    cout << "Total Belanja (+ PPN 25%)         : " << totalAkhirBelanja << "\n";
-
+    cout << "Total Belanja (+ PPN 25%)     : " << totalAkhirBelanja << "\n";
+    cout << "[Fathan]: Ren, totalnya segitu. Uang lu berapa?\n";
+    cout << "[Rendy]: hmmmmmmmm, pajaknya gede juga ya.\n";
     // Hitung uang kembalian.
     cout << "--------------------------------------------\n";
-    cout << "Terima uang dari pelanggan (Rp.) : ";
+    cout << "Nominal uang Rendy (Rp.)      : ";
     cin >> uangPelanggan;
     kembalian = uangPelanggan - totalAkhirBelanja;
 
@@ -40,16 +40,16 @@ int main (){
     cout << "[Bina]: Nih, Than. Rincian kembaliannya : "; 
     cout << "Total Kembalian : Rp. "  << kembalian << "\n";
     
-    n100k = kembalian / seratus; kembalian %= seratus;
-    n50k = kembalian / limaPuluh; kembalian %= limaPuluh;
-    n20k = kembalian / duapuluh; kembalian %= duapuluh;
-    n10k = kembalian / sepuluh; kembalian %= sepuluh;
-    n5k = kembalian / limaribu; kembalian %= limaribu;
-    n1k = kembalian / seribuKertas; kembalian %= seribuKertas;
-    k1k = kembalian / seribuKoin; kembalian %= seribuKoin;
-    k500 = kembalian / limaratusKoin; kembalian %= limaratusKoin;
-    k200 = kembalian / duaratusKoin; kembalian %= duaratusKoin;
-    k100 = kembalian / seratusKoin; kembalian %= seratusKoin;
+    n100k = kembalian / 100000; kembalian %= 100000;
+    n50k = kembalian / 50000; kembalian %= 50000;
+    n20k = kembalian / 20000; kembalian %= 20000;
+    n10k = kembalian / 10000; kembalian %= 10000;
+    n5k = kembalian / 5000; kembalian %= 5000;
+    n1k = kembalian / 1000; kembalian %= 1000;
+    k1k = kembalian / 1000; kembalian %= 1000;
+    k500 = kembalian / 500; kembalian %= 500;
+    k200 = kembalian / 200; kembalian %= 200;
+    k100 = kembalian / 100; kembalian %= 100;
     cout << "--------------------------------------------\n";
 
     cout << "- Rp 100.000  : " << n100k << " lembar\n";
@@ -64,7 +64,7 @@ int main (){
     cout << "- Rp 100      : " << k100 << " koin\n";
     cout << "--------------------------------------------\n";
 
-    cout << "[Fathan]: Aman! Sisa Receh tak terpercaya: " << kembalian << "\n";
+    cout << "[Fathan]: Aman! Sisa Receh tak terpercaya: Rp. " << kembalian << "\n";
     cout << "ini mau di Donasikan ga Ren?" << "\n";
     cout << "[Rendy]: GAS" << "\n";
     cout << "============================================\n";
